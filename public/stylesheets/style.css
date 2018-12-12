@@ -1,0 +1,55 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #34495e;
+  color: #ecf0f1;
+}
+
+p {
+  color: #ecf0f1;
+}
+
+input, button {
+  margin: 5px;
+}
+
+input[type="submit"] {
+  padding: 10px;
+  padding-left: 25px;
+  padding-right: 25px;
+  margin: 5px;
+  background-color: #34495e;
+  border: 2px solid white;
+  color: #ecf0f1;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2em;
+}
+
+input[type="submit"]:hover {
+  border: 2px dotted white;
+}
+
+h1 {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 3em;
+}
+
+p {
+  font-family: 'Montserrat', sans-serif;
+}
+
+label {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.form-container {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+a {
+  color: black;
+  font-size: 1em;
+  text-decoration: none;
+}

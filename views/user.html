@@ -1,0 +1,39 @@
+<!doctype html>
+<html ng-app="myApp">
+    
+<head>
+    <title>Tetris Online | MyProfile</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Permanent+Marker" rel="stylesheet">
+</head>
+        
+<body>  
+
+  <a id="chatLink" href='/chat'><button>Chat</button></a>
+  <a id="leaderboardLink" href='/leaderboard'><button>Leaderboard</button></a>
+  <a id="chatLink" href='/'><button>Play Tetris</button></a>
+  <a id="logoutLink" href="/logout"><button>Logout</button></a>
+  
+    <div class="form-container" ng-controller="myController">
+        <p id="sectionTitle" class="form-header">User Profile</p>
+        <form method="POST" action="/user/update">
+            <label>Username:</label>
+            <input type="text" id="username" name="username" ng-model="user.username" disabled><br>
+            <label>Email:</label>
+            <input type="email" id="email" name="email" ng-model="user.email"><br>          
+            <label>Number of Games Played: <span {{$scope.user.number_games_played}}></span></label><br>
+            <input type="submit" id="save" value="Save">
+        </form>
+    </div>
+    <form method="POST" action="/user/delete">
+        <input type="submit" id="delete" value="Delete User">
+    </form>
+    <hr>
+    <span id="userMsg">
+    <%= msg %>
+    </span>
+    <script src="http://code.angularjs.org/1.2.9/angular.js"></script>
+    <script src="/javascripts/my_app.js"></script>
+</body>
+
+</html>

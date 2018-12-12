@@ -1,0 +1,51 @@
+<!doctype html>
+<html ng-app="myApp">
+
+<head>
+  <title>Tetris Online | Play</title>
+  <link rel="stylesheet" type="text/css" href="./stylesheets/game.css" />
+  <link rel="stylesheet" type="text/css" href="./stylesheets/style.css" />
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="http://code.angularjs.org/1.2.9/angular.min.js"></script>
+  <script src="./javascripts/my_app.js"></script>
+  <script src="./javascripts/tetris.js"></script>
+</head>
+
+<body>
+  <a id="chatLink" href='/chat'><button>Chat</button></a>
+  <a id="leaderboardLink" href='/leaderboard'><button>Leaderboard</button></a>
+  <a id="editLink" href="/user"><button>Edit User</button></a>
+  <a id="logoutLink" href="/logout"><button>Logout</button></a>
+  <div ng-controller="myController">
+    <h2 id="welcomeText">
+      Welcome <%= username %> 
+      <br>Your highscore:  <%= highscore %>
+          <!--<a id="leaderboardLink" href="/leaderboard">Leaderboard</a>-->
+    </h2>
+
+    <div id="container">
+      <div id="heading">
+        <h1>Tetris</h1>
+      </div>
+
+
+      <div id="games-block">
+        <input type="button" onclick="tetris()" value="Play Tetris!" id="startButton" />
+        <div id="game-canvas"></div>
+
+      </div>
+      <p>
+        Use a/d or left/right arrow keys to move left and right.<br>
+        Up arrow key or w to rotate block.<br>
+        Down or s arrow key to drop block faster. <br />
+        Space bar to instantly drop block. <br />
+        Escape ends the game.
+      </p>
+    </div>
+  </div>
+  
+
+</body>
+
+</html>
